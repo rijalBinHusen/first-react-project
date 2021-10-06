@@ -1,5 +1,5 @@
 import React from "react";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
 export default function Button(props) {
@@ -9,7 +9,7 @@ export default function Button(props) {
   if (props.isSmall) className.push("btn-sm");
   if (props.isBlock) className.push("btn-block");
   if (props.hasShadow) className.push("btn-shadow");
-  if (props.isDisabled) className.push("btn-disabled");
+  if (props.isDisabled) className.push("disabled");
 
   if (props.isDisabled || props.isLoading) {
     return (
@@ -45,14 +45,14 @@ export default function Button(props) {
       );
     } else {
       return (
-        <link
+        <Link
           to={props.href}
           className={className.join(" ")}
           style={props.style}
           onClick={onClick}
         >
           {props.children}
-        </link>
+        </Link>
       );
     }
   }
@@ -63,7 +63,7 @@ export default function Button(props) {
       style={props.style}
       onClick={onClick}
     >
-      {props.childre}
+      {props.children}
     </button>
   );
 }
