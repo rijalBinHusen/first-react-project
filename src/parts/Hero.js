@@ -6,6 +6,7 @@ import iconCities from "assets/images/icons/icon-cities.svg";
 import iconTraveler from "assets/images/icons/icon-traveler.svg";
 import iconTreasure from "assets/images/icons/icon-treasure.svg";
 import Button from "elements/Button";
+import numberFormat from "../utils/formatNumber";
 
 export default function Hero(props) {
   function showMostPicked() {
@@ -40,7 +41,7 @@ export default function Hero(props) {
           </Button>
 
           <div className="row" style={{ marginTop: 80 }}>
-            <div className="col-auto" style={{ marginRight: 35 }}>
+            <div className="" style={{ marginRight: 35 }}>
               <img
                 width="36"
                 heigth="36"
@@ -48,8 +49,9 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travelers`}
               />
               <h6 className="mt-3 ">
-                {props.data.travelers}
+                {numberFormat(props.data.travelers)}
                 <span className="text-gray-500 font-weight-light">
+                  {" "}
                   Travelers
                 </span>
               </h6>
@@ -63,8 +65,9 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Travelers`}
               />
               <h6 className="mt-3 ">
-                {props.data.treasures}
+                {numberFormat(props.data.treasures)}
                 <span className="text-gray-500 font-weight-light">
+                  {" "}
                   Treasure
                 </span>
               </h6>
@@ -78,15 +81,15 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Travelers`}
               />
               <h6 className="mt-3 ">
-                {props.data.cities}
-                <span className="text-gray-500 font-weight-light">Cities</span>
+                {numberFormat(props.data.cities)}
+                <span className="text-gray-500 font-weight-light"> Cities</span>
               </h6>
             </div>
           </div>
         </div>
 
         <div className="col-6 pl-5">
-          <div style={{ width: 520, heigth: 410 }}>
+          <div style={{ width: 500, heigth: 410 }}>
             <img
               src={ImageHero}
               alt="Room with couches"
