@@ -11,7 +11,7 @@ import numberFormat from "../utils/formatNumber";
 export default function Hero(props) {
   function showMostPicked() {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop < 30,
+      top: props.refMostPicked.current.offsetTop - 30,
     });
   }
 
@@ -40,8 +40,8 @@ export default function Hero(props) {
             Show me now
           </Button>
 
-          <div className="row" style={{ marginTop: 80 }}>
-            <div className="" style={{ marginRight: 35 }}>
+          <div className="row" style={{ marginTop: 50 }}>
+            <div className="col-auto" style={{ marginRight: 35 }}>
               <img
                 width="36"
                 heigth="36"
@@ -57,7 +57,7 @@ export default function Hero(props) {
               </h6>
             </div>
 
-            <div className="col-auto" style={{ marginRight: 35 }}>
+            <div className="" style={{ marginRight: 35 }}>
               <img
                 width="36"
                 heigth="36"
@@ -73,7 +73,7 @@ export default function Hero(props) {
               </h6>
             </div>
 
-            <div className="col-auto" style={{ marginRight: 35 }}>
+            <div className="" style={{ marginRight: 35 }}>
               <img
                 width="36"
                 heigth="36"
