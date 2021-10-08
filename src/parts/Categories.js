@@ -17,7 +17,7 @@ export default function Categories({ data }) {
             category.items.map((item, index2) => {
               return (
                 <div
-                  className="item column-3 row-1"
+                  className="item column-3 row-1 card"
                   key={`category-${index1}-item-${index2}`}
                 >
                   <div className="card">
