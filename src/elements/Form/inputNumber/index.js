@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import propTypes from "prop-types"
-
 import "./index.scss"
-// import { regexp } from 'assert-plus';
 
 export default function Number(props) {
     const {value, placeholder, name, min, max, prefix, suffix} = props;
@@ -24,9 +22,9 @@ export default function Number(props) {
                     value: +value
                 }
             });
-            setInputValue(`${prefix}${value}${suffix}`)
+            setInputValue(`${prefix}${value}${suffix}`);
         }
-    }
+    };
 
      const minus = () => {
          value > min &&
@@ -34,20 +32,18 @@ export default function Number(props) {
                 target: {
                     name: name,
                     value: +value - 1
-                }
-            })
-     }
-
+                },
+            });
+     };
      const plus = () => {
-         value < plus &&
+         value < max &&
             onChange({
                 target: {
                     name: name,
                     value: +value + 1
                 }
-            })
-     }
-
+            });
+     };
     return (
         <div className={["input-number mb-3", props.outerClassName].join(" ")}>
             <div className="input-group">
@@ -56,9 +52,16 @@ export default function Number(props) {
                         -
                     </span>
                 </div>
-                <input min={min} max={max} name={name} pattern="[0-9]*"
-                className="formControl" placeholder={placeholder ? placeholder : 0}
-                value={String(InputValue)} onChange={onChange} />
+                <input 
+                    min={min} 
+                    max={max} 
+                    name={name} 
+                    pattern="[0-9]*"
+                    className="formControl" 
+                    placeholder={placeholder ? placeholder : "0"}
+                    value={String(InputValue)} 
+                    onChange={onChange} 
+                    />
                 <div className="input-group-append">
                     <span className="input-group-text plus" onClick={plus}>
                         +
@@ -66,7 +69,7 @@ export default function Number(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 Number.defaultProps = {
