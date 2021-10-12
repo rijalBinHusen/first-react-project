@@ -57,7 +57,7 @@ export default function Number(props) {
                     max={max} 
                     name={name} 
                     pattern="[0-9]*"
-                    className="formControl" 
+                    className="form-control" 
                     placeholder={placeholder ? placeholder : "0"}
                     value={String(InputValue)} 
                     onChange={onChange} 
