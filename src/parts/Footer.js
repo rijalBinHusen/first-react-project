@@ -9,10 +9,10 @@ export default function Footer () {
 			<div className="container">
 				<div className="row">
 					<div className="col" style={{width:350}}>
-						<IconText /><br />
-						<a className="brand-tagline">
+						<IconText />
+						<p className="brand-tagline">
 							We kaboom your beaufy holyday instantly and memorable.
-						</a>
+						</p>
 					</div>
 					<div className="col-2 mr-5">
 						<h6 className="mt-2">For beginners</h6>
