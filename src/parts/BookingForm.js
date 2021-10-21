@@ -60,7 +60,6 @@ export default class BookingForm extends Component {
 					}
 				}
 			})
-			console.log(this.state)
 		}
 	}
 
